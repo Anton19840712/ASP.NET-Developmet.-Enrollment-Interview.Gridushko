@@ -6,7 +6,9 @@ public class Program
     {
         Console.WriteLine("Write your sentence with duplicate words");
         string str = Console.ReadLine();
-        string[] arr = str.Split(' ');
+         //string[] arr = str.Split(' ');
+        string[] arr = str.Split(new Char[] { '.', ',', '!', '?', '-',':', ';', ' ' },
+                                 StringSplitOptions.RemoveEmptyEntries);
         Console.WriteLine(str);
         var a =
         from k in arr
